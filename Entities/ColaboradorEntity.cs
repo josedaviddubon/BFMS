@@ -10,8 +10,17 @@ namespace Entities
     public class ColaboradorEntity
     {
         [Key]
+        [StringLength(50)]
         public string ColaboradorID { get; set; }
 
+        [Required]
+        [StringLength(50)]
+
         public string NombreColaborador { get; set; }
+
+
+        public ICollection<SucursalDetalleEntity> SucursalDetalle { get;set; }
+
+
     }
 }
